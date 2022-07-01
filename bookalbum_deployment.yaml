@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bookalbum
+  name: bookalbum_nak
   labels:
-    app: bookalbum
+    app: bookalbum_nak
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: bookalbum
+      app: bookalbum_nak
   template:
     metadata:
       labels:
-        app: bookalbum
+        app: bookalbum_nak
     spec:
       containers:
-      - name: bookalbum
+      - name: bookalbum_nak
         image: nibha1611/bookmoviealbum:latest
         ports:
         - containerPort: 80
